@@ -1,0 +1,182 @@
+// VARIABLES/MIXINS/MEDIAS Q ↓↓
+@use 'base' as * ;
+
+// HEADER N' FOOTER STYLES ↓↓
+// CONTAINER ↓↓
+.container {
+    @include columnDisplay ;
+    overflow-x: hidden ;
+    background: $background-container ;
+
+    // HEADER SECTION ↓↓
+    header {
+        @include columnDisplay ;
+        color: $color-letter ;
+        box-shadow: 5px 2px 15px $color-box-shadow ;
+        background: linear-gradient(10deg, $line-gradient-dark, $line-gradient-light) ;
+
+        .header__title {
+            @include flexDisplaynAlign(center, unset) ;
+            gap: 10px ;
+            font-size: 30px ;
+            font-weight: 600 ;
+            padding: 10px 0 ;
+
+            h1 {
+                color: $color-letter ;
+                @include width-470 {
+                    font-size: 36px ;
+                }
+
+                span {
+                    color: $color-plus-symbol ;
+                    margin-left: 10px ;
+                }
+            }
+        }
+        nav {
+            @include flexDisplaynAlign(space-between, unset) ;
+            padding: 5px 10px 10px ;
+            //-- MEDIA QUERY 
+            @include width-545 {
+                padding: 5px 20px 10px ;
+            }
+            .navbar__burger-menu {
+                display: none ;
+                //-- MEDIA QUERY
+                @include width-545 {
+                    display: flex ;
+                    height: 35px ;
+                    width: 35px ;
+                    fill: #fff ;
+                }
+            }
+            // CLASE AGREGADA CON JS (PARA EL "NAV") ↓↓
+            .show-navbar-list {
+                transform: translateX(0%) ;
+            }
+            ul {
+                @include flexDisplaynAlign(unset, center) ;
+                //-- MEDIA QUERY
+                @include width-545 {
+                    @include columnDisplay ;
+                    position: fixed;
+                    width: 35%;
+                    height: 100vh;
+                    left: 0;
+                    top: 0;
+                    gap: 40px;
+                    padding-top: 40px;
+                    box-shadow: 2px 0 10px #333;
+                    background: linear-gradient(45deg, black, #4a54a5);
+                    transform: translateX(-105%) ;
+                    transition: transform 300ms linear ;
+                    z-index: 2;
+                }
+                li {
+                    padding: 0 25px ;
+                    @include width-655 {
+                        padding: 0 10px ;
+                    }
+                    &:nth-child(1) {
+                        display: none ;
+                        @include width-545 {
+                            display: flex ;
+                        }   
+                        svg {
+                            fill: $color-letter ;
+                        }
+                    }
+                    a {
+                        color: $color-letter ;
+                        transition: 300ms linear ;
+                        &:hover {
+                            color: $color-plus-symbol;
+                        }
+                    }
+                }
+            }
+            .navbar__search {
+                @include flexDisplaynAlign(space-between, center) ;
+                padding: 0 10px ;
+                border-radius: 10px ;
+                background: $color-letter ;
+                gap: 10px ;
+                
+                input {
+                    font-size: 16px ;
+                    border: none ;
+                    outline: none ;
+                    color: $background-h2 ;
+                    @include width-470 {
+                        font-size: 14px ;
+                    }
+                }
+                svg {
+                    width: 20px ;
+                    cursor: pointer ;
+                    transition: all 300ms linear ;
+                    &:hover {
+                        fill: $background-h2 ;
+                        transform: scale(1.1) ;
+                    }
+                }
+            }
+        }
+    }
+    // MAIN SECTION ↓↓
+    main {
+        @include columnDisplay ;
+        margin-top: 80px ;
+        align-items: center ;
+        gap: 60px ;
+        //-- MEDIA QUERY
+        @include width-470 {
+            margin-top: 55px ;
+            gap: 45px ;
+        }
+        
+        h2 {
+            width: 30% ;
+            padding: 5px ;
+            border-radius: 10px ;
+            font-size: 34px ;
+            text-align: center ;
+            color: $color-letter ;
+            background: $background-h2 ;
+            //-- MEDIA QUERY
+            @include width-870 {
+                width: 45% ;
+            }
+            @include width-545 {
+                width: 60% ;
+            }
+            @include width-470 {
+                width: 80% ;
+                font-size: 26px ;
+            }
+        }
+        .shows-articles {
+            width: 100% ;
+            display: flex ;
+            flex-direction: column ;
+            align-items: center ;
+        }
+    }
+    // FOOTER SECTION ↓↓
+    footer {
+        margin-top: 40px ;
+        padding: 40px 0 ;
+        box-shadow: -5px -2px 15px $color-box-shadow ;
+        background: linear-gradient(10deg, $line-gradient-dark, $line-gradient-light) ;
+        @include width-470 {
+            margin-top: 0 ;
+        }
+
+        p {
+            font-size: 16px ;
+            text-align: center ;
+            color: $color-letter ;
+        }
+    }
+}    

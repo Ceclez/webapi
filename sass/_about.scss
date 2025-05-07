@@ -1,0 +1,45 @@
+// VARIABLES/MIXINS/MEDIAS Q ↓↓
+@use 'base' as * ;
+
+// ABOUT SECTION STYLES ↓↓
+
+.content-about__about {
+    width: 60% ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    justify-self: center ;
+    border-radius: 14px ;
+    padding: 40px ;
+    gap: 30px ;
+    background: #5D466C ;
+    margin-bottom: 50px ;
+
+    //-- MEDIA QUERY ↓↓
+    @include width-710 {
+        width: 80% ;
+    }
+    @include width-545 {
+        width: 95% ;
+    }
+    @include width-470 {
+        width: 100% ;
+        padding: 40px 25px ;
+    }
+
+    h3 {
+        font-size: 34px ;
+        text-align: start ;
+        font-weight: 600 ;
+        color: $color-letter ;
+    }
+
+    p {
+        font-size: 16px ;
+        font-weight: 600 ;
+        line-height: 1.5 ;
+        color: $color-letter ;
+    }
+}
+
+

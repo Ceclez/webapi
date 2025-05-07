@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="js/actors.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <title>InfoShows+ Actors</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <section class="header__title">
+                <h1 class="title__title-header">InfoShows<span class="title-header__plus">+</span></h1>
+            </section>
+            <nav class="header__navbar">
+                <svg xmlns="http://www.w3.org/2000/svg" class="navbar__burger-menu" id="navbar__burger-menu" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="M94.15-211.04v-96.81h772.08v96.81H94.15Zm0-220.84v-96.44h772.08v96.44H94.15Zm0-221.03v-96.82h772.08v96.82H94.15Z"/></svg>
+                <ul class="navbar__list" id="navbar__list">
+                    <li class="list-element" id="list-element__close-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="element__link" height="24px" viewBox="0 -960 960 960" width="24px" fill="#434343"><path d="m254-159-94-95 225-226-225-226 94-96 226 226 226-226 94 96-225 226 225 226-94 95-226-226-226 226Z"/></svg>
+                    </li>
+                    <li class="list-element">
+                        <a href="index.html" class="element__link">Home</a>
+                    </li>
+                    <li class="list-element">
+                        <a href="shows.html" class="element__link">Shows</a>
+                    </li>
+                    <li class="list-element">
+                        <a href="actors.html" class="element__link">Actors</a>
+                    </li>
+                    <li class="list-element">
+                        <a href="about.html" class="element__link">About</a>
+                    </li>
+                </ul>
+                <div class="navbar__search">
+                    <input type="text" class="search__input" id="search__input" placeholder="Search an actor here">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="search__icon" id="search__icon" height="24px" viewBox="0 -960 960 960"
+                        width="24px" fill="#434343">
+                        <path
+                            d="M793-94 539-348q-30 23-73.5 36.5T377-298q-119 0-201.5-82.5T93-582q0-119 82.5-201.5T377-866q119 0 201.5 82.5T661-582q0 45-12.5 86T612-423l255 255-74 74ZM377-404q75 0 126.5-51.5T555-582q0-75-51.5-126.5T377-760q-75 0-126.5 51.5T199-582q0 75 51.5 126.5T377-404Z" />
+                    </svg>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main" id="main">
+            <h2 class="main__title" id="main__title">Actors</h2>
+
+            <section class="actors-articles" id="articles">
+                <!--Sección para armar los artículos con la información de cada actor-->
+            </section>
+         </main>
+
+        <footer class="footer">
+            <p class="footer__legend">
+                &copy; 2025 InfoShows+, All rights reserved.
+            </p>
+        </footer>
+
+        <!--Mensaje de error por petición API (mostrar con JS)-->
+        <div id="msgContainer">
+            <p id="error-message">
+                <!--Texto relativo-->
+            </p>
+        </div>
+    </div>
+</body>
+</html>

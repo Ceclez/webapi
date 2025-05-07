@@ -1,0 +1,10 @@
+// MIXINS ↓↓
+@mixin columnDisplay {
+    display: flex ;
+    flex-direction: column ;
+}
+@mixin flexDisplaynAlign ($justifyContent, $alignItem) {
+    display: flex ;
+    justify-content: $justifyContent ;
+    align-items: $alignItem ;
+}

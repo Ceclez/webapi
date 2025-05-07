@@ -1,0 +1,31 @@
+// MEDIA QUERY ↓↓
+@mixin width-1200 {
+    @media screen and (max-width: 1200px) { @content } ;
+}
+@mixin width-1140 {
+    @media screen and (max-width: 1140px) { @content } ;
+} 
+@mixin width-1062 {
+    @media screen and (max-width: 1062px) { @content } ;
+}
+@mixin width-870 {
+    @media screen and (max-width: 870px) { @content } ;
+} 
+@mixin width-710 {
+    @media screen and (max-width: 710px) { @content } ;
+} 
+@mixin width-655 {
+    @media screen and (max-width: 655px) { @content } ;
+} 
+@mixin width-595 {
+    @media screen and (max-width: 595px) { @content } ;
+} 
+@mixin width-545 {
+    @media screen and (max-width: 545px) { @content } ;
+} 
+@mixin width-470 {
+    @media screen and (max-width: 470px) { @content } ;
+} 
+@mixin width-375 {
+    @media screen and (max-width: 375px) { @content } ;
+} 
